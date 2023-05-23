@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+    flex: {
+      '4': '4 4 0%'
+    },
   },
   plugins: [require("daisyui")],
 }

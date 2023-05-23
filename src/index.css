@@ -35,7 +35,9 @@ h1 {
   line-height: 1.1;
 }
 
-
+.home-c{
+  height: calc(100vh-4rem);
+}
 
 @media (prefers-color-scheme: light) {
   :root {
