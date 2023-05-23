@@ -13,7 +13,7 @@ function App() {
   const keycloak = new Keycloak({
     url: "http://localhost:8080",
     realm: "company-services",
-    clientId: "movies-app"
+    clientId: "chatt-app"
   })
   const initOptions = { pkceMethod: 'S256' }
 
