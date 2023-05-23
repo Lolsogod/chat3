@@ -1,9 +1,14 @@
 import { useKeycloak } from "@react-keycloak/web"
 import { isAdmin } from "./api/Helpers"
+import { chatApi } from "./api/ChatApi"
 import { Link, NavLink } from 'react-router-dom'
 import { Container, Dropdown, Menu } from 'semantic-ui-react'
+import { useEffect } from "react"
 
 export default function Navbar(){
+    useEffect(()=>{
+      console.log(keycloak.hasRealmRole)
+    },[])
     const { keycloak } = useKeycloak()
     const handleLogInOut = () => {
         if (keycloak.authenticated) {
@@ -41,6 +46,7 @@ export default function Navbar(){
           <ul className="menu menu-horizontal px-1">
             <li><a>{getUsername()}</a></li>
             <li><button className="btn" onClick={handleLogInOut}>{getLogInOutText()}</button></li>
+            <li><button className="btn" onClick={() => chatApi.getUserExtrasMe(keycloak.token)}>get</button></li>
           </ul>
         </div>
       </div>
