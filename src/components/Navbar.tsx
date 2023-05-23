@@ -33,16 +33,17 @@ export default function Navbar(){
       }
     
     return(
-        <div className="navbar bg-base-100">
-            <div className="flex-1">
-                <a className="btn btn-ghost normal-case text-xl">CoolChat</a>
-            </div>
-            <div className="flex-none">
-                <ul className="menu menu-horizontal px-1">
-                    <li><button className="btn" onClick={handleLogInOut}>{getLogInOutText()}</button></li>
-                    <li>{getUsername()}</li>
-                </ul>
-            </div>
-        </div>    
+      <div className="navbar bg-base-100">
+        <div className="flex-1">
+          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        </div>
+        <div className="flex-none">
+          <ul className="menu menu-horizontal px-1">
+            <li><a><button onClick={handleLogInOut}>{getLogInOutText()}</button></a></li>
+            <li><a>{getUsername()}</a></li>
+          </ul>
+        </div>
+      </div>
+        
     )
 }
