@@ -40,6 +40,7 @@ export default function Navbar(){
             <div className="flex-none">
                 <ul className="menu menu-horizontal px-1">
                     <li><button className="btn" onClick={handleLogInOut}>{getLogInOutText()}</button></li>
+                    <li>{getUsername()}</li>
                 </ul>
             </div>
         </div>    
