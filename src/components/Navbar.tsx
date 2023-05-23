@@ -33,6 +33,6 @@ export default function Navbar(){
       }
     
     return(
-        <Link to={"/login"} onClick={handleLogInOut}>{getLogInOutText()}</Link>
+        <button  onClick={handleLogInOut}>{getLogInOutText()}</button>
     )
 }
